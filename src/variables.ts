@@ -5,6 +5,7 @@ const isStudent: boolean = true;
 let aNull: null = null;
 let anUndefined: undefined = undefined;
 let nickname: string | null = '';
+let thisAny: any;
 
 //Array Type
 const favoriteNumbers: number[] = [10, 20, 30];
@@ -31,6 +32,12 @@ export function showVariables(): void {
   console.log('Null : ' + aNull);
   console.log('Nickname : ' + (isBlank(nickname) ? nickname : ''));
   console.log('User: ' + user.name.toUpperCase() + ", Last Name: " + user.lname.toLowerCase() +" and Age: " + user.age);
+  thisAny = 'Hello Any';
+  console.log(`This is a string assigned to an any variable ${thisAny}`);
+  thisAny = 56;
+  console.log(`This is a number assigned to an any variable ${thisAny}`);
+  thisAny = true;
+  console.log(`This is a boolen assigned to an any variable ${thisAny}`);
 }
 
 function isBlank(text: string): boolean {

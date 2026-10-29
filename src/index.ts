@@ -5,6 +5,7 @@ import { loopsDemo } from "./loops";
 import { methodDemo } from "./methods";
 import { ClassDemo } from "./ClassDemo";
 import { CallBackVsPromise } from "./CallBackVsPromise";
+import { TypeVsInterface } from "./TypeVsInterface";
 
 
 //showVariables();
@@ -29,25 +30,29 @@ import { CallBackVsPromise } from "./CallBackVsPromise";
 //console.log(classDemo.describe(26));
 //console.log(classDemo.describe());
 
-const cbvspr = new CallBackVsPromise();
+// const cbvspr = new CallBackVsPromise();
 
-function writeThis():void {
-    console.log("Write This ....")
-}
+// function writeThis():void {
+//     console.log("Write This ....")
+// }
 
-cbvspr.fetchDataWithCallback((result) => {
-    console.log(result);
-});
+// cbvspr.fetchDataWithCallback((result) => {
+//     console.log(result);
+// });
 
-cbvspr.fetchDataWithCallback(writeThis);
+// cbvspr.fetchDataWithCallback(writeThis);
 
 // What happens:
 // fetchData() returns a Promise
 // when it finishes successfully, .then(...) runs
 // if there is an error, .catch(...) runs
 // This is cleaner and more readable.
-cbvspr.fetchData()
-    .then((result) => { console.log(result) })
-    .catch((err) => { console.log(err) });
+// cbvspr.fetchData()
+//     .then((result) => { console.log(result) })
+//     .catch((err) => { console.log(err) });
 
-cbvspr.loadNumber();
+//cbvspr.loadNumber();
+
+const typeInter = new TypeVsInterface();
+
+typeInter.getDetailsPoint(3, 5);

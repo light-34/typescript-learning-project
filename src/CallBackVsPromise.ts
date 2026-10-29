@@ -53,8 +53,4 @@ export class CallBackVsPromise {
         const data = await this.getNumberPromise();
         console.log("Loaded number: " + data);
     }
-
-
-
-
 }
